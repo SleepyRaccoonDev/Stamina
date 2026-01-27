@@ -1,0 +1,10 @@
+namespace Assets.Project._Develop.Runtime.Infrastructure.LoadingScreen
+{
+    public interface ILoadingScreen
+    {
+        bool IsShown { get; }
+
+        void Show();
+        void Hide();
+    }
+}
