@@ -31,7 +31,7 @@ namespace Assets.Project._Develop.Runtime.Utilities.SceneManagment
             yield return _sceneLoaderService.LoadAsync(Scenes.Empty);
             yield return _sceneLoaderService.LoadAsync(sceneName);
 
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.5f);
 
             SceneBootstrap sceneBootstrap = Object.FindObjectOfType<SceneBootstrap>();
 

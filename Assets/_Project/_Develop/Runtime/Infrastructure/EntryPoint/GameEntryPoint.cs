@@ -6,7 +6,8 @@ using Assets.Project._Develop.Runtime.Utilities.CoroutinesManagment;
 using Assets.Project._Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
-namespace Assets.Project._Develop.Runtime.Infrastructure.EntryPoint {
+namespace Assets.Project._Develop.Runtime.Infrastructure.EntryPoint
+{
     public class GameEntryPoint : MonoBehaviour
     {
         private void Awake()
@@ -36,8 +37,6 @@ namespace Assets.Project._Develop.Runtime.Infrastructure.EntryPoint {
             Debug.Log("Начинается инициализация сервисов");
 
             yield return conteiner.Resolve<ConfigsProviderService>().LoadAsync();
-
-            yield return new WaitForSeconds(1f);
 
             Debug.Log("Завершается инициализация сервисов");
 

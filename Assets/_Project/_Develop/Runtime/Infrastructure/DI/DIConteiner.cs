@@ -54,7 +54,7 @@ namespace Assets.Project._Develop.Runtime.Infrastructure.DI
                     return (T)registration.CreateInstamceFrom(this);
 
                 if (_parent != null)
-                    _parent.Resolve<T>();
+                    return _parent.Resolve<T>();
             }
             finally
             {
